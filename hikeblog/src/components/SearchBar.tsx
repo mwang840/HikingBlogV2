@@ -2,11 +2,9 @@
 import React from "react";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 import { NPSKey } from "../app/parksKey";
-import axios from "axios";
 import { Park } from "@/@types/api/Park/Park";
 import debounce from "lodash.debounce";
 import { useQuery } from "react-query";
-import Image from "next/image";
 
 export default function SearchBar() {
     const apiUrl = "https://developer.nps.gov/api/v1/parks";
@@ -50,7 +48,7 @@ export default function SearchBar() {
         },
         750,
     );
-    console.log(data)
+    console.log(data);
 
     return (
         <div className="relative w-full">
@@ -69,7 +67,6 @@ export default function SearchBar() {
                 <FaMagnifyingGlass />
             </label>
             <ul>
-
                 {data !== undefined && (
                     <div className="menu">
                         {data.map((eachPark, eachParkIndex) => (
