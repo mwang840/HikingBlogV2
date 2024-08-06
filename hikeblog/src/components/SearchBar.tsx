@@ -50,6 +50,7 @@ export default function SearchBar() {
         },
         750,
     );
+    console.log(data)
 
     return (
         <div className="relative w-full">
@@ -68,19 +69,6 @@ export default function SearchBar() {
                 <FaMagnifyingGlass />
             </label>
             <ul>
-                {(isFetching || isLoading) && (
-                    <div
-                        className={`pt-5 font-bold text-lg w-full flex flex-row justify-center`}
-                    >
-                        <Image
-                            className="animate-twSpin animate-infinite rounded-full border-white border-2"
-                            src="https://avatars.githubusercontent.com/u/90732327?v=4"
-                            width={35}
-                            height={35}
-                            alt="Picture of Jesus Christ"
-                        />
-                    </div>
-                )}
 
                 {data !== undefined && (
                     <div className="menu">
