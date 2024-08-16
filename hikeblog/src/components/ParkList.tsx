@@ -35,7 +35,7 @@ export const ParkList = ({ search }: ParkListProperties) => {
     if (data.length === 0) {
         return (
             <div className="text-lg font-bold text-center">
-                {"Search gave no results"}
+                {"The park you searched for does not exist!"}
             </div>
         );
     }
