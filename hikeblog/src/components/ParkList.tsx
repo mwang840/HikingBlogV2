@@ -31,8 +31,8 @@ export const ParkList = ({ search }: ParkListProperties) => {
     if (status !== "success") {
         return <span className="hidden" />;
     }
-
-    if (data.length === 0) {
+    console.log(error);
+    if (error) {
         return (
             <div className="text-lg font-bold text-center">
                 {"The park you searched for does not exist!"}
