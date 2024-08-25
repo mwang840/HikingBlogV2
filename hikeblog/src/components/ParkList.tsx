@@ -1,4 +1,4 @@
-import { NPSKey } from "../app/parksKey";
+import { NPSKey } from "@/app/parksKey";
 import Image from "next/image";
 import { useQuery } from "react-query";
 import { Park } from "@/@types/api/Park/Park";
