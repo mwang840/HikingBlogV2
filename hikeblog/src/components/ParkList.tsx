@@ -1,4 +1,4 @@
-import { NPSKey } from "../app/parksKey";
+import { NPSKey } from "@/app/parksKey";
 import Image from "next/image";
 import { useQuery } from "react-query";
 import { Park } from "@/@types/api/Park/Park";
@@ -31,8 +31,8 @@ export const ParkList = ({ search }: ParkListProperties) => {
     if (status !== "success") {
         return <span className="hidden" />;
     }
-
-    if (error || !data) {
+    console.log(error);
+    if (error) {
         return (
             <div className="text-lg font-bold text-center">
                 {"The park you searched for does not exist!"}
