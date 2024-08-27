@@ -19,10 +19,10 @@ export default function SearchBar() {
     );
 
     return (
-        <div className="flex flex-col w-full">
+        <div className="flex flex-col w-full ">
             <label className="input input-bordered self-center flex items-center gap-2 w-[40rem] relative">
                 <input
-                    className="flex pl-10"
+                    className="flex pl-10 "
                     type="text"
                     onChange={onSearchChange}
                     placeholder="Search for a park"

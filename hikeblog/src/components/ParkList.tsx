@@ -18,6 +18,7 @@ export const ParkList = ({ search }: ParkListProperties) => {
             const fetchResponse = await fetch(
                 `${apiUrl}?q=${search}&api_key=${NPSKey}`,
             );
+            console.log(fetchResponse);
             const searchedParks = await fetchResponse.json();
 
             const { data } = searchedParks;
@@ -26,13 +27,12 @@ export const ParkList = ({ search }: ParkListProperties) => {
         },
     });
 
-    console.log(status);
 
     if (status !== "success") {
         return <span className="hidden" />;
     }
 
-    if (data.length === 0) {
+    if (error || !data) {
         return (
             <div className="text-lg font-bold text-center">
                 {"The park you searched for does not exist!"}
