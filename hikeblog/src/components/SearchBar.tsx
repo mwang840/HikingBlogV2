@@ -34,7 +34,7 @@ export default function SearchBar() {
                 />
                 <FaMagnifyingGlass className="absolute right-2" />
             </label>
-            <ParkList search={search} />
+            <ParkList search={search} onSearchChange={setSearch} />
         </div>
     );
 }
